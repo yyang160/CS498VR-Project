@@ -22,7 +22,7 @@ public class Pause : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown("a")){
+		if(Input.GetKeyDown("tab")){
 			if(!IsPause){
 				IsPause = true;
 				PauseMenu.SetActive(true);

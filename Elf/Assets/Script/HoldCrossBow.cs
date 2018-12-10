@@ -23,7 +23,7 @@ public class HoldCrossBow : MonoBehaviour {
 	
 	private void OnTriggerStay(Collider other) {
 		//Debug.Log(other.gameObject.tag);
-        if (!IsHoldCrossBow && other.gameObject.tag == "Player"){
+        if (!Bag.Hold && !IsHoldCrossBow && other.gameObject.tag == "Player"){
 			if(OVRInput.Get(OVRInput.Button.Two)){ // Button B
 				IsHoldCrossBow = true;
 				Pickup();

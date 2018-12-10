@@ -14,24 +14,23 @@ public class Bag : MonoBehaviour {
 	public static int SoilBallCount = 0;
 	public static int WaterBallCount = 0;
 	public static int FireBallCount = 0;
-	
+
 	public static bool PokeBallHold = false;
 	public static bool MetalBallHold = false;
 	public static bool WoodBallHold = false;
 	public static bool SoilBallHold = false;
 	public static bool WaterBallHold = false;
 	public static bool FireBallHold = false;
+
+	public static bool Hold = false;
 	
-	public GameObject PokeBall;
-	public GameObject MetalBall;
-	public GameObject WoodBall;
-	public GameObject SoilBall;
-	public GameObject WaterBall;
-	public GameObject FireBall;
-	
-	//public Text countObj;
-	
-	public Transform hand;
+	public GameObject MetalBallStatus;
+	public GameObject WoodBallStatus;
+	public GameObject SoilBallStatus;
+	public GameObject WaterBallStatus;
+	public GameObject FireBallStatus;
+
+	public Text PokeBallCountObj;
 	
 	// Use this for initialization
 	void Start () {
@@ -40,12 +39,26 @@ public class Bag : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//countObj.text = "0";
-		
-		if(PokeBallHold){
-			PokeBall.SetActive(true);
-			PokeBall.transform.rotation = hand.rotation;
-			PokeBall.transform.position = hand.position;
+		PokeBallCountObj.text = PokeBallCount.ToString();
+
+		if(MetalBallCount > 0){
+			MetalBallStatus.SetActive(true);
+		}
+
+		if(WoodBallCount > 0){
+			WoodBallStatus.SetActive(true);
+		}
+
+		if(SoilBallCount > 0){
+			SoilBallStatus.SetActive(true);
+		}
+
+		if(WaterBallCount > 0){
+			WaterBallStatus.SetActive(true);
+		}
+
+		if(FireBallCount > 0){
+			FireBallStatus.SetActive(true);
 		}
 	}
 }

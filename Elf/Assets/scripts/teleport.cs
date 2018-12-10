@@ -21,7 +21,7 @@ public class teleport : MonoBehaviour {
         {
             if (OVRInput.Get(OVRInput.Button.One))
             {
-                player.transform.position = new Vector3(-63f, 3.619f, 11f);
+                player.transform.position = new Vector3(79f, 3.619f, 54f);
             }
         }
     }
